@@ -1,12 +1,12 @@
 import React from 'react'
 import Main from './Desktop/Main'
-import Color from './Desktop/Colors/Color'
+import Display from './Desktop/ConnectedScreen/Display'
 
 const DesktopApp = () => {
   return (
     <>
-    <Color/>
-    <Main/>
+    {/* <Main/> */}
+    <Display/>
     </>
   )
 }

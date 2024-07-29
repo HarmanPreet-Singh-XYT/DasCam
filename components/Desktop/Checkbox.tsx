@@ -1,12 +1,11 @@
 import React from 'react';
 import { TouchableOpacity, View, StyleSheet } from 'react-native';
-import externalStyles from './StyleSheet';
+import createStyles from './StyleSheet';
 import { Tick } from './SVGImages';
-import { useColorScheme } from 'react-native-windows';
-
+import useColors from './Colors/Color';
 
 const CheckBox = ({ size = 24, isChecked, toggleCheck }:{size?:number,isChecked:boolean,toggleCheck:()=>void}) => {
-  const deviceColorTheme = useColorScheme();
+  const externalStyles = createStyles(useColors());
   return (
     <TouchableOpacity
       style={styles.container}

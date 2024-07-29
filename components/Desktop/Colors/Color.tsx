@@ -1,4 +1,4 @@
-import { useLayoutEffect } from "react";
+import { useLayoutEffect, useState } from "react";
 import { useColorScheme } from "react-native-windows";
 const themeColors = {
     light:{
@@ -8,22 +8,20 @@ const themeColors = {
         color4:'#112D4E'
     },
     dark:{
-        color1:'#424874',
-        color2:'#A6B1E1',
-        color3:'#DCD6F7',
-        color4:'#F4EEFF'
+        color1:'#222831',
+        color2:'#393E46',
+        color3:'#00ADB5',
+        color4:'#EEEEEE'
     }
 };
-let colors = themeColors.light;
-const Color = () => {
+const useColors = () => {
     const deviceColorTheme = useColorScheme();
+    const [colors, setColors] = useState(themeColors.light);
+
     useLayoutEffect(() => {
-        if(deviceColorTheme==='light') colors=themeColors.light;
-        else colors=themeColors.dark;
-    }, []);
-  return (
-    <></>
-  )
-}
-export default Color;
-export {colors};
+        setColors(deviceColorTheme === 'light' ? themeColors.light : themeColors.dark);
+    }, [deviceColorTheme]);
+
+    return colors;
+};
+export default useColors;

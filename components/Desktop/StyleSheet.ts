@@ -1,6 +1,5 @@
 import { StyleSheet } from "react-native"
-import { colors } from "./Colors/Color"
-const styles = StyleSheet.create({
+const createStyles = (colors:{color1:string,color2:string,color3:string,color4:string}) => StyleSheet.create({
     color1:{
         backgroundColor:colors.color1
     },
@@ -27,4 +26,4 @@ const styles = StyleSheet.create({
         borderWidth:2,
     }
 })
-export default styles;
+export default createStyles;
