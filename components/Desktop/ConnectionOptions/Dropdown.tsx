@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
-import createStyles from '../StyleSheet';
-import { Reload } from '../SVGImages';
-import useColors from '../Colors/Color';
+import createStyles from '../../Common/StyleSheet';
+import { Reload } from '../../Common/SVGImages';
+import useColors from '../../Common/Color.Desktop';
 interface Option {
   label: string;
   value: string;

@@ -1,7 +1,7 @@
 import { View, Text } from 'react-native'
 import React from 'react'
-import createStyles from '../StyleSheet';
-import useColors from '../Colors/Color';
+import createStyles from '../../Common/StyleSheet';
+import useColors from '../../Common/Color.Desktop';
 const CameraStream = () => {
     const style = createStyles(useColors());
   return (

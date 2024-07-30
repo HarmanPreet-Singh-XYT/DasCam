@@ -1,8 +1,8 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 import StatusBar from './StatusBar'
-import createStyles from '../StyleSheet'
-import useColors from '../Colors/Color'
+import createStyles from '../../Common/StyleSheet'
+import useColors from '../../Common/Color.Desktop'
 import CameraStream from './CameraStream'
 import ControlBtn from './ControlBtn'
 

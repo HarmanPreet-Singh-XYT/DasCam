@@ -1,10 +1,14 @@
-import { View, Text } from 'react-native'
 import React from 'react'
 import DesktopApp from './components/DesktopApp'
-
+import { Platform } from 'react-native';
+import MobileApp from './components/MobileApp';
 const App = () => {
+  const platform = Platform.OS;
   return (
-    <DesktopApp/>
+    <>
+    {(platform==='windows'||platform==='macos') && <DesktopApp/>}
+    {(platform==='android'||platform==='ios') && <MobileApp/>}
+    </>
   )
 }
 

@@ -1,7 +1,7 @@
-import Svg, { Circle, G, Mask, Path } from 'react-native-svg';
-import createStyles from './StyleSheet';
-import useColors from './Colors/Color';
+import Svg, { Circle, G, Mask, Path, Rect } from 'react-native-svg';
+import useColors from './Color.Mobile';
 import { View } from 'react-native';
+import createStyles from './StyleSheet';
 const Tick = ()=>{
     const styles = createStyles(useColors());
     return(
@@ -89,7 +89,7 @@ const AutoFocus = ({selectedColor}:{selectedColor:string})=>{
             <Path d='M1.5 1.5H38.5V38.5H1.5V1.5Z' fill={selectedColor} stroke={selectedColor} strokeWidth={3}/>
         </Mask>
         <G mask='url(#mask0_37_22)'>
-            <Path d='M19.9995 22.8574C23.9444 22.8574 27.1424 19.6594 27.1424 15.7145C27.1424 11.7696 23.9444 8.57166 19.9995 8.57166C16.0547 8.57166 12.8567 11.7696 12.8567 15.7145C12.8567 19.6594 16.0547 22.8574 19.9995 22.8574Z' stroke={selectedColor} strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill={selectedColor}/>
+            <Path d='M19.9995 22.8574C23.9444 22.8574 27.1424 19.6594 27.1424 15.7145C27.1424 11.7696 23.9444 8.57166 19.9995 8.57166C16.0547 8.57166 12.8567 11.7696 12.8567 15.7145C12.8567 19.6594 16.0547 22.8574 19.9995 22.8574Z' stroke={selectedColor} strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
             <Path d='M29.456 30.7145C26.8454 28.4087 23.4821 27.1361 19.9989 27.1361C16.5157 27.1361 13.1525 28.4087 10.5417 30.7145' stroke={selectedColor} strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
             <Path d="M38.5714 30V35.7143C38.5714 36.472 38.2703 37.1989 37.7346 37.7346C37.1989 38.2703 36.472 38.5714 35.7143 38.5714H30" stroke={selectedColor} strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
             <Path d="M30 1.42834H35.7143C36.472 1.42834 37.1989 1.72936 37.7346 2.26518C38.2703 2.801 38.5714 3.52772 38.5714 4.28549V9.99977" stroke={selectedColor} strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
@@ -117,17 +117,25 @@ const Settings = ({selectedColor}:{selectedColor:string})=>{
 }
 const StatusDots = ({selectedStatus}:{selectedStatus:string})=>{
     return(
-        <View className='justify-center h-full top-1 ml-2'>
+        <View style={{justifyContent:'center',height:'100%',top:4}}>
         {selectedStatus==='green' && 
-        <View className='bg-[#95BF44] h-[20px] w-[20px] rounded-full'></View>
+        <View style={{backgroundColor:"#95BF44",height:20,width:20,borderRadius:100}}></View>
         }
         {selectedStatus==='yellow' && 
-        <View className='bg-[#FFC300] h-[20px] w-[20px] rounded-full'></View>
+        <View style={{backgroundColor:"#FFC300",height:20,width:20,borderRadius:100}}></View>
         }
         {selectedStatus==='red' && 
-        <View className='bg-[#FF474C] h-[20px] w-[20px] rounded-full'></View>
+        <View style={{backgroundColor:"#FF474C",height:20,width:20,borderRadius:100}}></View>
         }
         </View>
     )
 }
-export {Tick,WiFi,Server,USB,SelectedBtn,Reload,Flash,AutoFocus,Settings,Capture,StatusDots};
+const HD = ({selectedColor,backgroundColor}:{selectedColor:string,backgroundColor:string})=>{
+    return(
+    <Svg width={61} viewBox='0 0 41 23' height={43} fill={'none'}>
+        <Rect x={0.5} y={0.5} strokeWidth={2} width={40} height={22} rx={11} fill={backgroundColor} stroke={selectedColor}/>
+        <Path d='M9.88281 16C9.6224 16 9.52604 15.8568 9.59375 15.5703L11.9766 5.22656C12.0443 4.9401 12.2083 4.79688 12.4688 4.79688H13.1875C13.4479 4.79688 13.5443 4.9401 13.4766 5.22656L12.4844 9.53125H17.9375L18.9297 5.22656C18.9974 4.9401 19.1615 4.79688 19.4219 4.79688H20.1406C20.401 4.79688 20.4974 4.9401 20.4297 5.22656L18.0469 15.5703C17.9792 15.8568 17.8151 16 17.5547 16H16.8359C16.5755 16 16.4792 15.8568 16.5469 15.5703L17.6406 10.8125H12.1875L11.0938 15.5703C11.026 15.8568 10.862 16 10.6016 16H9.88281ZM20.9922 16C20.7318 16 20.6354 15.8568 20.7031 15.5703L23.0859 5.22656C23.1536 4.9401 23.3177 4.79688 23.5781 4.79688H26.0703C27.9349 4.79688 29.2266 5.2526 29.9453 6.16406C30.6641 7.07552 31.0234 8.14583 31.0234 9.375C31.0234 11.1458 30.4766 12.6927 29.3828 14.0156C28.2891 15.3385 26.5833 16 24.2656 16H20.9922ZM22.3984 14.7188H24.4922C26.2214 14.7188 27.474 14.1667 28.25 13.0625C29.0312 11.9583 29.4219 10.6979 29.4219 9.28125C29.4219 8.38542 29.2083 7.625 28.7812 7C28.3594 6.375 27.3359 6.0625 25.7109 6.0625H24.3984L22.3984 14.7188Z' fill={selectedColor}/>
+    </Svg>
+    )
+}
+export {Tick,WiFi,Server,USB,SelectedBtn,Reload,Flash,AutoFocus,Settings,Capture,StatusDots,HD};

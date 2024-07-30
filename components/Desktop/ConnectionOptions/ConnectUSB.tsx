@@ -1,9 +1,8 @@
 import { View, Text, TouchableOpacity, TextInput } from 'react-native'
 import React, { useState } from 'react'
-import CheckBox from '../Checkbox'
-import createStyles from '../StyleSheet'
+import createStyles from '../../Common/StyleSheet'
 import Dropdown from './Dropdown'
-import useColors from '../Colors/Color'
+import useColors from '../../Common/Color.Desktop'
 import AudioVideoOptions from './AudioVideoOptions'
 interface Option {
   label: string;

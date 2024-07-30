@@ -1,8 +1,8 @@
 import { View, Text } from 'react-native'
 import React from 'react'
-import createStyles from '../StyleSheet'
-import useColors from '../Colors/Color'
-import CheckBox from '../Checkbox'
+import createStyles from '../../Common/StyleSheet'
+import useColors from '../../Common/Color.Desktop'
+import CheckBox from '../../Common/Checkbox'
 const AudioVideoOptions = ({isCheckedVideo,isCheckedAudio,toggleCheckAudio,toggleCheckVideo}:{isCheckedVideo:boolean,isCheckedAudio:boolean,toggleCheckAudio:()=>void,toggleCheckVideo:()=>void}) => {
     const styles = createStyles(useColors());
   return (

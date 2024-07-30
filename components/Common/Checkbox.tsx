@@ -1,8 +1,8 @@
 import React from 'react';
 import { TouchableOpacity, View, StyleSheet } from 'react-native';
-import createStyles from './StyleSheet';
+import createStyles from '../Common/StyleSheet';
 import { Tick } from './SVGImages';
-import useColors from './Colors/Color';
+import useColors from './Color.Desktop';
 
 const CheckBox = ({ size = 24, isChecked, toggleCheck }:{size?:number,isChecked:boolean,toggleCheck:()=>void}) => {
   const externalStyles = createStyles(useColors());

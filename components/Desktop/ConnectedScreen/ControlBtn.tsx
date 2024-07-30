@@ -1,8 +1,8 @@
 import { View, Text, TouchableOpacity } from 'react-native'
 import React from 'react'
-import createStyles from '../StyleSheet';
-import useColors from '../Colors/Color';
-import { AutoFocus, Capture, Flash, Settings } from '../SVGImages';
+import createStyles from '../../Common/StyleSheet';
+import useColors from '../../Common/Color.Desktop';
+import { AutoFocus, Capture, Flash, Settings } from '../../Common/SVGImages';
 const ControlBtn = ({isServer=false}:{isServer?:boolean}) => {
     const style = createStyles(useColors());
   return (

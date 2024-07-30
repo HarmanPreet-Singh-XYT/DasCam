@@ -1,12 +1,12 @@
 import { View, Text, TouchableOpacity, TextInput } from 'react-native'
 import React, { useState } from 'react'
 import ConnectWiFi from './ConnectionOptions/ConnectWiFi'
-import {WiFi,Server,USB,SelectedBtn} from './SVGImages';
+import {WiFi,Server,USB,SelectedBtn} from '../Common/SVGImages';
 import { useColorScheme } from 'react-native-windows';
 import ConnectUSB from './ConnectionOptions/ConnectUSB';
 import ConnectServer from './ConnectionOptions/ConnectServer';
-import createStyles from './StyleSheet';
-import useColors from './Colors/Color';
+import createStyles from '../Common/StyleSheet';
+import useColors from '../Common/Color.Desktop';
 const Main = () => {
   const styles = createStyles(useColors());
     const [selectedOption, setselectedOption] = useState({wifi:true,usb:false,server:false});
