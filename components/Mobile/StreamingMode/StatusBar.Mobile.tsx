@@ -9,7 +9,7 @@ const StatusBar = () => {
     const style = createStyles(useColors());
     const [StatusCode, setStatusCode] = useState('green');
   return (
-    <View className='flex-auto rounded-3xl max-h-[40px] justify-evenly px-4 flex-row' style={[style.color2,style.borderColor]}>
+    <View className='flex-auto w-[90%] mx-auto mb-4 rounded-3xl max-h-[40px] justify-evenly px-4 flex-row' style={[style.color2,style.borderColor]}>
       <View className='flex-auto flex-row gap-2 items-center'>
         <StatusDots selectedStatus={StatusCode}/>
       </View>
