@@ -1,6 +1,6 @@
 import Svg, { Circle, Defs, G, Image, Line, Mask, Path, Pattern, Rect, Use } from 'react-native-svg';
 import useColors from './Color.Mobile';
-import { View } from 'react-native';
+import { useColorScheme, View } from 'react-native';
 import createStyles from './StyleSheet';
 const Tick = ()=>{
     const styles = createStyles(useColors());
@@ -175,32 +175,13 @@ const Microphone=({selectedColor}:{selectedColor:string})=>{
     </Svg>
     )
 }
-const LightTV = ()=>{
+
+const TV = ()=>{
+    const style = createStyles(useColors());
     return(
-        <Svg width={39} height={27} viewBox="0 0 39 27" fill="none">
-            <Rect x={1} y={2} width={38} height={25} fill={'url(#pattern0_135_11)'}/>
-            <Line x1={'0.72768'} y1={'25.5807'} x2={'38.4679'} y2={'1.07191'} stroke={'black'}/>
-            <Defs>
-                <Pattern id='pattern0_135_11' patternContentUnits='objectBoundingBox' width={1} height={1}>
-                    <Use xlinkHref='#image0_135_11' transform={'matrix(0.00195312 0 0 0.00296875 0 -0.26)'}/>
-                </Pattern>
-                <Image id='image0_135_11' width={512} height={512} xlinkHref={'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAMAAADDpiTIAAAAA3NCSVQICAjb4U/gAAAACXBIWXMAAG66AABuugHW3rEXAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAADNQTFRFAAAAAAAAAAAAAgICAgICAgICAgICAgICAgICAgICAgICAgICAwMDAgICAgICAgICAgICrWv82QAAABB0Uk5TACEoKDREWHCGmKjIyNj4+7C5IHsAAALhSURBVHja7dw7DoJAAEVRRkGxcf/7tBE/jCsQQkHic85poZg8b0IBsesAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACgLWX58nAyUbjHc/Fyv9LHYMFwy79/d7BQ2wQgAASAABAAAkAACAAB0Ih+w7212itCKfsEcJ9sG+F88QhAAAgAASAABIAAEAACQAAIAAEgAASAAASAABAAAkAACAABIAAEgAAQAAJAAAgAASAABIAAEAACQAAIAAEgAASAABAAAkAACAABIAAEgAAQAAJAAAgAASAABIAAEAACQAAIAAEgAASAABAAAkAACAABIAAEgAAQAAJAAAgAASAABIAAEAACQAAIAAEgAASAABAAAkAACAABIAAEgAAQAAJAAAhAAAgAASAABIAAEAACQAAIAAEgAASAABAAAkAACAABIAAEgAAQAAJAAAgAASAABIAAEAACQAAIAAEgAASAABAAAkAACAABIAAEgAAQAAJAAAgAASAABIAAEAACQAAIAAEgAASAABAAAkAACAABIAAEgAAQAAJAAAgAASAABIAAEAACQAAIAAEgAASAAASAABAAAkAACAABIAAEgAAQAAJAAAgAASAABIAAEAACQAAIAAEgAASAABAAAkAACAABIAAEgAAQAAJAAAgAASAABIAAEAACQAAIAAEgAASAABAAAkAACAABIAAEgAAQAAJAAAgAASAABIAAEAACQAAIAAEgAASAABAAAkAAfNNvuLcc7RWh7BTAONrWIwABIAAEgAAQAAJAAAgAASAA0qy8C5gnE4WbTQAAAAAAANCsEnTWhFfXtYYF0Aed9RpwxvctLAAfhDROAAJAAAgAASAABIAAEAACQAAIAAEgAASAABAAAkAA/I2kj0JfAWf0jzwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADw4z5O3hKJ+E4XQAAAAABJRU5ErkJggg=='}/>
-            </Defs>
+        <Svg width={40} height={30} viewBox="0 0 40 30" fill="none">
+            <Path fill-rule="evenodd" clip-rule="evenodd" d="M6 7.5C6 6.70435 6.42143 5.94129 7.17157 5.37868C7.92172 4.81607 8.93913 4.5 10 4.5H30C31.0609 4.5 32.0783 4.81607 32.8284 5.37868C33.5786 5.94129 34 6.70435 34 7.5V19.5C34 20.2956 33.5786 21.0587 32.8284 21.6213C32.0783 22.1839 31.0609 22.5 30 22.5H25.56L25.806 23.2335L27.414 24.4395C27.6936 24.6493 27.884 24.9165 27.9612 25.2075C28.0383 25.4984 27.9987 25.7999 27.8474 26.074C27.696 26.348 27.4397 26.5823 27.1109 26.7471C26.7821 26.9119 26.3955 26.9999 26 27H14C13.6045 26.9999 13.2179 26.9119 12.8891 26.7471C12.5603 26.5823 12.304 26.348 12.1526 26.074C12.0013 25.7999 11.9617 25.4984 12.0388 25.2075C12.116 24.9165 12.3064 24.6493 12.586 24.4395L14.194 23.2335L14.44 22.5H10C8.93913 22.5 7.92172 22.1839 7.17157 21.6213C6.42143 21.0587 6 20.2956 6 19.5V7.5ZM17.542 18H10V7.5H30V18H17.542Z" fill={style.fontColor.color}/>
         </Svg>
     )
 }
-const DarkTV = ()=>{
-    return(
-        <Svg width={43} height={38} viewBox="0 0 43 38" fill="none">
-            <Rect x={3} width={38} height={38} fill={'url(#pattern0_136_12)'}/>
-            <Line x1={'0.72768'} y1={'31.0894'} x2={'42.6612'} y2={'3.85747'} stroke={'#00ADB5'}/>
-            <Defs>
-                <Pattern id='pattern0_136_12' patternContentUnits='objectBoundingBox' width={1} height={1}>
-                    <Use xlinkHref='#image0_136_12' transform={'matrix(0.00195312 0 0 0.00296875 0 -0.26)'}/>
-                </Pattern>
-                <Image id='image0_136_12' width={100} height={100} xlinkHref={'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA50lEQVR4nO3dwQ0CMQwAwbQH/Vdw0IdRJEQLtwozFcRZ/70WAAAAAAAHGFIEiREkRpAYQWIEiREkRpAYQWIEiREkRpAYQWIEiREkRpAYQWIEiREkRpAYQWIEiREkRpAYQWIEiREkRpAYQWIEiREkRpAYQWIEiREkRpAYQWIEiREkRpAYQWIEiREkRpAYQWIEiREkRpAYQWIEiREkRpAYQWIEiREkRpAYQWIEiREkRpAYQWIEiREkRpCYu8+XAMDPzDxn5j3ne+1Z8+m/D/0X16oTJGZmHntz5nzXnvXu/wYAAAAAYAV9ABIlWpHRBUIjAAAAAElFTkSuQmCC'}/>
-            </Defs>
-        </Svg>
-    )
-}
-export {DarkTV,LightTV,Exposure,ZoomIn,ZoomOut,Microphone,Tick,WiFi,Server,USB,SelectedBtn,Reload,Flash,AutoFocus,Settings,Capture,StatusDots,HD,TurnDark};
+export {TV,Exposure,ZoomIn,ZoomOut,Microphone,Tick,WiFi,Server,USB,SelectedBtn,Reload,Flash,AutoFocus,Settings,Capture,StatusDots,HD,TurnDark};

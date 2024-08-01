@@ -12,6 +12,7 @@ import IPWebcam from './Mobile/Settings/SettingScreens/IPWebcam';
 import Connected from './Mobile/StreamingMode/Connected';
 import { Text } from 'react-native-svg';
 import Home from './Mobile/Home/Home';
+import StopButton, { DisablePreview } from './Mobile/StreamingMode/StopDisablePreviewButton';
 const MobileApp = () => {
   const Stack = createNativeStackNavigator();
   const style = createStyles(useColors());
@@ -29,7 +30,7 @@ const MobileApp = () => {
             fontSize:24
           },
           headerRight:()=>(
-            <TouchableOpacity onPress={()=>navigation.navigate('settings')}><Settings selectedColor={style.color4.backgroundColor}/></TouchableOpacity>
+            <TouchableOpacity onPress={()=>navigation.navigate('connected')}><Settings selectedColor={style.color4.backgroundColor}/></TouchableOpacity>
           ),
           headerShadowVisible:false
         })} component={Home}/>
@@ -45,7 +46,8 @@ const MobileApp = () => {
           },
           headerRight:()=>(
             <>
-            <TouchableOpacity><Text>Stop</Text></TouchableOpacity>
+            <StopButton/>
+            <DisablePreview/>
             <TouchableOpacity onPress={()=>navigation.navigate('settings')}><Settings selectedColor={style.color4.backgroundColor}/></TouchableOpacity>
             </>
           ),
