@@ -6,6 +6,10 @@
     <ProjectReference Include="$(ProjectDir)..\..\node_modules\@react-native-community\netinfo\windows\RNCNetInfoCPP\RNCNetInfoCPP.vcxproj">
       <Project>{37e37094-01b3-44a5-aab7-f0379b1ce8fa}</Project>
     </ProjectReference>
+    <!-- Projects from react-native-screens -->
+    <ProjectReference Include="$(ProjectDir)..\..\node_modules\react-native-screens\windows\RNScreens\RNScreens.vcxproj">
+      <Project>{d638f49e-29d2-4699-ac52-facd82fa7138}</Project>
+    </ProjectReference>
     <!-- Projects from react-native-svg -->
     <ProjectReference Include="$(ProjectDir)..\..\node_modules\react-native-svg\windows\RNSVG\RNSVG.vcxproj">
       <Project>{7acf84ec-efba-4043-8e14-40b159508902}</Project>

@@ -89,7 +89,7 @@ const AutoFocus = ({selectedColor}:{selectedColor:string})=>{
             <Path d='M1.5 1.5H38.5V38.5H1.5V1.5Z' fill={selectedColor} stroke={selectedColor} strokeWidth={3}/>
         </Mask>
         <G mask='url(#mask0_37_22)'>
-            <Path d='M19.9995 22.8574C23.9444 22.8574 27.1424 19.6594 27.1424 15.7145C27.1424 11.7696 23.9444 8.57166 19.9995 8.57166C16.0547 8.57166 12.8567 11.7696 12.8567 15.7145C12.8567 19.6594 16.0547 22.8574 19.9995 22.8574Z' stroke={selectedColor} strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill={selectedColor}/>
+            <Path d='M19.9995 22.8574C23.9444 22.8574 27.1424 19.6594 27.1424 15.7145C27.1424 11.7696 23.9444 8.57166 19.9995 8.57166C16.0547 8.57166 12.8567 11.7696 12.8567 15.7145C12.8567 19.6594 16.0547 22.8574 19.9995 22.8574Z' stroke={selectedColor} strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
             <Path d='M29.456 30.7145C26.8454 28.4087 23.4821 27.1361 19.9989 27.1361C16.5157 27.1361 13.1525 28.4087 10.5417 30.7145' stroke={selectedColor} strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
             <Path d="M38.5714 30V35.7143C38.5714 36.472 38.2703 37.1989 37.7346 37.7346C37.1989 38.2703 36.472 38.5714 35.7143 38.5714H30" stroke={selectedColor} strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
             <Path d="M30 1.42834H35.7143C36.472 1.42834 37.1989 1.72936 37.7346 2.26518C38.2703 2.801 38.5714 3.52772 38.5714 4.28549V9.99977" stroke={selectedColor} strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>

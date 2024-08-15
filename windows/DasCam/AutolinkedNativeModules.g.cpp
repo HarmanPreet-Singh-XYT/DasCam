@@ -6,6 +6,9 @@
 // Includes from @react-native-community/netinfo
 #include <winrt/ReactNativeNetInfo.h>
 
+// Includes from react-native-screens
+#include <winrt/RNScreens.h>
+
 // Includes from react-native-svg
 #include <winrt/RNSVG.h>
 
@@ -16,6 +19,8 @@ void RegisterAutolinkedNativeModulePackages(winrt::Windows::Foundation::Collecti
 { 
     // IReactPackageProviders from @react-native-community/netinfo
     packageProviders.Append(winrt::ReactNativeNetInfo::ReactPackageProvider());
+    // IReactPackageProviders from react-native-screens
+    packageProviders.Append(winrt::RNScreens::ReactPackageProvider());
     // IReactPackageProviders from react-native-svg
     packageProviders.Append(winrt::RNSVG::ReactPackageProvider());
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import { TouchableOpacity, View, StyleSheet } from 'react-native';
-import createStyles from '../Common/StyleSheet';
+import createStyles from './StyleSheet';
 import { Tick } from './SVGImages';
 import useColors from './Color.Desktop';
 
